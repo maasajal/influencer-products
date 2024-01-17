@@ -1,0 +1,132 @@
+/* Imported Google font family: Poppins, Manrope and Inter  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variables */
+:root {
+  --white: #fff;
+  --heading: #3a3a3a;
+  --btn-bg-color: #e02c6d;
+  --Text-Gray-900: #18191f;
+  --Dark-Color: rgba(0, 0, 0, 0.87);
+  --Gray-50: #787885;
+  --featuredHeading: #0a0826;
+  --featuredP: #6c6c6c;
+  --Text-Gray-300: #d9dbe1;
+}
+
+/* Common shared styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Manrope", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2 {
+  font-feature-settings: "clig" off, "liga" off;
+  color: var(--heading);
+}
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 600;
+}
+h3 {
+  font-feature-settings: "liga" off;
+  color: var(--Text-Gray-900);
+}
+p {
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 175%;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-feature-settings: "clig" off, "liga" off;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+button {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 4.1rem;
+  border: 0;
+  display: inline-flex;
+  padding: 10px 24px;
+  align-items: flex-start;
+  gap: 8px;
+  background: var(--btn-bg-color);
+  cursor: pointer;
+}
+.container {
+  width: 80%;
+  height: auto;
+  margin: 5rem auto;
+}
+
+/* Header section styles */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12rem;
+}
+header nav .hideIcon {
+  display: none;
+}
+header nav .hideIcon a {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--heading);
+}
+header nav h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+header nav .menu {
+  display: inline-flex;
+}
+header nav .menu a {
+  color: var(--heading);
+  margin-left: 3.4rem;
+  line-height: 4rem;
+  text-transform: capitalize;
+}
+
+/* Responsive for medium devices min-width: 576px and max-width: 992px */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  header nav {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Responsive for small devices max width: 576px */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 90%;
+    margin: 3.5rem auto;
+  }
+  header nav .hideIcon {
+    display: block;
+  }
+  header nav .menu {
+    display: none;
+  }
+}
