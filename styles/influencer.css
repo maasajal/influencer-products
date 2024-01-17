@@ -50,6 +50,7 @@ p {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 175%;
+  padding: 1rem 0;
 }
 li {
   list-style: none;
@@ -73,6 +74,8 @@ button {
   gap: 8px;
   background: var(--btn-bg-color);
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
 }
 .container {
   width: 80%;
@@ -109,11 +112,49 @@ header nav .menu a {
   text-transform: capitalize;
 }
 
+/* Banner styles */
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13rem;
+}
+.banner .banner-content {
+  max-width: 80%;
+}
+.banner .banner-content h1 {
+  font-size: 5.2rem;
+}
+.banner .banner-img {
+  position: relative;
+  max-width: 80%;
+}
+.banner .banner-img img {
+  width: 100%;
+}
+.banner .banner-img .main-camera {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+}
+
 /* Responsive for medium devices min-width: 576px and max-width: 992px */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   header nav {
     flex-direction: column;
     gap: 2rem;
+  }
+  .banner {
+    gap: 5rem;
+  }
+  .banner .banner-content h1 {
+    font-size: 3rem;
+  }
+  .banner .banner-img {
+    max-width: 100%;
+  }
+  .banner .banner-img .main-camera {
+    top: 0;
   }
 }
 
@@ -123,10 +164,23 @@ header nav .menu a {
     width: 90%;
     margin: 3.5rem auto;
   }
+  button {
+    font-weight: 500;
+  }
   header nav .hideIcon {
     display: block;
   }
   header nav .menu {
     display: none;
+  }
+  .banner {
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  .banner .banner-content {
+    text-align: center;
+  }
+  .banner .banner-content h1 {
+    font-size: 3rem;
   }
 }
