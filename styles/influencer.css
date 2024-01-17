@@ -138,6 +138,20 @@ header nav .menu a {
   top: 1rem;
 }
 
+/* Sponsors styles */
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 3rem;
+  border-top: 1px solid rgba(192, 204, 218, 0.6);
+  border-bottom: 1px solid rgba(192, 204, 218, 0.6);
+  padding: 3.5rem;
+}
+.sponsors img {
+  width: auto;
+}
+
 /* Responsive for medium devices min-width: 576px and max-width: 992px */
 @media screen and (min-width: 576px) and (max-width: 992px) {
   header nav {
@@ -182,5 +196,9 @@ header nav .menu a {
   }
   .banner .banner-content h1 {
     font-size: 3rem;
+  }
+  .sponsors {
+    border: 0;
+    gap: 2rem;
   }
 }
